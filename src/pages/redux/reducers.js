@@ -1,18 +1,12 @@
 
-import { SET_USER_AGE, SET_USER_NAME, GET_FILM } from "./api";
+import { GET_FILM } from "./api";
 
 const initialState = {
-    name: '',
-    age: 0,
     film: [],
 }
 
-function userReducer(state = initialState, action){
+function FilmReducer(state = initialState, action){
     switch(action.type){
-        case SET_USER_NAME:
-            return {...state, name: action.payload};
-        case SET_USER_AGE:
-            return {...state, age: action.payload};
         case GET_FILM:
             return {...state, film: action.payload};
         default:
@@ -20,4 +14,4 @@ function userReducer(state = initialState, action){
     }
 }
 
-export default userReducer;
+export default FilmReducer;

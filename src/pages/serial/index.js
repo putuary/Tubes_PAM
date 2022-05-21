@@ -8,7 +8,7 @@ import { getFilm } from '../redux/api';
 
 
 const Film = () => {
-    const {film} = useSelector(state=>state.userReducer);
+    const {film} = useSelector(state=>state.FilmReducer);
 	const dispatch = useDispatch();
 
 	useEffect(()=>{

@@ -1,8 +1,7 @@
-export const SET_USER_NAME = 'SET_USER_NAME';
-export const SET_USER_AGE = 'SET_USER_AGE';
+
 export const GET_FILM = 'GET_FILM';
 
-const API_URL = 'https://mocki.io/v1/00b4c897-a3cf-4c95-86b6-519dd35e5429';
+const API_URL = 'https://api.themoviedb.org/3/trending/movie/week?api_key=70f528175d440c1c9f1d118607cf5bf7';
 
 export const getFilm = () => {
     try{
@@ -27,16 +26,4 @@ export const getFilm = () => {
         console.log(error)
     }
 }
-export const setName = name => dispatch => {
-    dispatch({
-        type: SET_USER_NAME,
-        payload: name,
-    });
-}
 
-export const setAge = age => dispatch => {
-    dispatch({
-        type: SET_USER_AGE,
-        payload: age,
-    });
-}
