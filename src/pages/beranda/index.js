@@ -16,23 +16,24 @@ const Homescreen = () => {
    return(
 	   <View style={{backgroundColor: 'black', flex: 1}}>
 		   <Beranda/>
+		   
 		   <View >
-		   		
-		   </View>
-		   <TouchableOpacity style={styles.card}>
 		  	<FlatList
+			  
 			  data={film}
-			  renderItem={({item})=>(
+			  renderItem={({item, index})=>(
+				<TouchableOpacity style={styles.card}>
 				  <View>
-					  
+					  <Image style={styles.gambar} source={{uri: item.image}}/>
 					  <Text style={styles.tulisan}>{item.name}</Text>
-					 
 					  
 				  </View>
+				  </TouchableOpacity>
 			  )}
 			  keyExtractor={(item, index) => index.toString()}
 			  />
-		   	</TouchableOpacity>
+		   </View>
+		   
 	   </View>
    )
 
@@ -45,11 +46,11 @@ const styles = StyleSheet.create({
     tulisan: {
 		color: 'white',
 		fontWeight: 'bold',
-		fontSize: 25,
-		top: 0,
-		left: 120,
-		alignItems: 'center',
+		fontSize: 20,
+		top: 10,
+		left: 125,
 		justifyContent: 'center'
+		
 	},
 	card: {
 		backgroundColor: '#fcba03',
@@ -57,13 +58,24 @@ const styles = StyleSheet.create({
 		marginTop: 10,
 		marginLeft: '2%',
 		width: '96%',
+		height: 200,
 		shadowColor: '#fff',
 		shadowOpacity: 1,
 		shadowOffset: {
 			width: 3,
 			height: 3
 		},
-		borderRadius: 10
+		borderRadius: 10,
+		justifyContent: 'center'
 		
+		
+	},
+	gambar: {
+		width: 100, 
+		height: 150, 
+		top: 10, 
+		left: 125,
+		bottom: 10,
+		borderRadius: 10,
 	}
 });

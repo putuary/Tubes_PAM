@@ -2,7 +2,7 @@ export const SET_USER_NAME = 'SET_USER_NAME';
 export const SET_USER_AGE = 'SET_USER_AGE';
 export const GET_FILM = 'GET_FILM';
 
-const API_URL = 'https://mocki.io/v1/e0127f73-cf50-4c68-b643-0809b3b844af';
+const API_URL = 'https://mocki.io/v1/00b4c897-a3cf-4c95-86b6-519dd35e5429';
 
 export const getFilm = () => {
     try{
