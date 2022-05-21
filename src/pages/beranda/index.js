@@ -1,61 +1,42 @@
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity } from 'react-native';
-import React from 'react';
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, FlatList } from 'react-native';
+import React, { useEffect } from 'react';
 import { Badge, Surface, Title } from 'react-native-paper'
+import Beranda from './index1';
+
 
 
 const Homescreen = () => {
-    const Kanan = () => (
-		    <TouchableOpacity style={{alignItems: 'center', justifyContent: 'center', top: 5, right: 20}}>
-                      <Image source={
-                          require('../../Assets/Icon/cari.png')}
-                          resizeMode="contain"
-                          style={{
-                              width: 30,
-                              height: 30,
-                              
-                          }}
-                          />
-        </TouchableOpacity>
-	      )
-	  const TitleView = () => (
-		    <View style={styles.titleView}>
-			    <Title style={{ color: 'white', left: 30 }}>Disni - coldstar</Title>
-		    </View>
-	    )
-	  return (
-		    <Surface style={[styles.header, { backgroundColor: 'black' }]}>
-			    <TitleView />
-			    <Kanan />
-		    </Surface>
-	    )   
+	
+   return(
+	   <View style={{backgroundColor: 'black', flex: 1}}>
+		   <Beranda/>
+		   <View >
+		   		
+		   </View>
+		   <View>
+		   		<Text style={styles.tulisan}>Ini beranda</Text>
+		   </View>
+		   		
+	   </View>
+   )
+
+	
 };
 
 export default Homescreen;
 
 const styles = StyleSheet.create({
-    header: {
-		height: 60,
-		elevation: 8,
-		justifyContent: 'space-between',
+    tulisan: {
+		color: 'white',
+		fontWeight: 'bold',
+		fontSize: 25,
+		top: 100,
+		left: 100,
 		alignItems: 'center',
-		flexDirection: 'row',
-		backgroundColor: 'black',
+		justifyContent: 'center'
 	},
-	view: {
-		marginHorizontal: 16,
-		alignItems: 'center',
-		flexDirection: 'row',
-	},
-	titleView: {
-		flex: 1,
-        color: 'white'
-	},
-	rightView: {
-		justifyContent: 'flex-end',
-	},
-	rowView: {
-		flexDirection: 'row',
-		alignItems: 'center',
-		marginRight: 10,
+	tulisan2:{
+		color: 'white',
+		fontWeight: 'bold',
 	}
 });
