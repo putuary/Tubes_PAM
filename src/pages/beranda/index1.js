@@ -19,7 +19,7 @@ const Beranda = () => {
 	      )
 	  const TitleView = () => (
 		    <View style={styles.titleView}>
-			    <Title style={{ color: 'white', left: 30, fontWeight: 'bold' }}>Disni - Coldstar</Title>
+			    <Title style={{ color: 'white', left: 30, fontWeight: 'bold' }}>Trending Film</Title>
 		    </View>
 	)
 	  return (

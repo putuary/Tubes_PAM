@@ -3,7 +3,7 @@ import React from 'react';
 const URL = 'https://image.tmdb.org/t/p/w500/';
 
 const TampilFilm = ({data}) => {
-    return data.map((item, index)=> {
+    {data.map((item, index)=> {
     return (
           <View style={styles.utama}>
             <TouchableOpacity style={styles.card} key={index}>
@@ -13,7 +13,7 @@ const TampilFilm = ({data}) => {
             </TouchableOpacity>
             </View>  
       );
-    });
+    })};
 };
 
 export default TampilFilm;

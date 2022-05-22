@@ -19,7 +19,7 @@ const BagianSerial = () => {
 	      )
 	  const TitleView = () => (
 		    <View style={styles.titleView}>
-			    <Title style={{ color: 'white', left: 30, fontWeight: 'bold' }}>Serial</Title>
+			    <Title style={{ color: 'white', left: 30, fontWeight: 'bold' }}>Serial TV</Title>
 		    </View>
 	)
 	  return (

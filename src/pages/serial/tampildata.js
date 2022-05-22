@@ -1,19 +1,20 @@
 import { StyleSheet, View, Image, TouchableOpacity, Text} from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 const URL = 'https://image.tmdb.org/t/p/w500/';
 
 const TampilSerial = ({data}) => {
-    return data.map((item, index)=> {
+  
+    return (data.map((list, index)=> {
     return (
           <View style={styles.utama}>
             <TouchableOpacity style={styles.card} key={index}>
               <View style={styles.box}>
-              <Image style={styles.gambar} source={{uri: `${URL}/${item.poster_path}`}}/>
+              <Image style={styles.gambar} source={{uri: `${URL}/${list.poster_path}`}}/>
             </View>
             </TouchableOpacity>
             </View>  
       );
-    });
+    }));
 };
 
 export default TampilSerial;
