@@ -2,7 +2,7 @@ import { StyleSheet, View, Image, TouchableOpacity,} from 'react-native';
 import React from 'react';
 const URL = 'https://image.tmdb.org/t/p/w500/';
 
-const TampilFilm = ({data}) => {
+const TampilMovie = ({data}) => {
     return data.map((item, index)=> {
     return (
           <View style={styles.utama}>
@@ -16,7 +16,7 @@ const TampilFilm = ({data}) => {
     });
 };
 
-export default TampilFilm;
+export default TampilMovie;
 
 const styles = StyleSheet.create({
 	gambar: {

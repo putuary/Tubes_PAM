@@ -1,14 +1,14 @@
-import { StyleSheet, View, Image, TouchableOpacity,} from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity, Text} from 'react-native';
 import React from 'react';
 const URL = 'https://image.tmdb.org/t/p/w500/';
 
-const TampilFilm = ({data}) => {
+const TampilSerial = ({data}) => {
     return data.map((item, index)=> {
     return (
           <View style={styles.utama}>
             <TouchableOpacity style={styles.card} key={index}>
               <View style={styles.box}>
-                  <Image style={styles.gambar} source={{uri: `${URL}/${item.poster_path}`}}/>
+              <Image style={styles.gambar} source={{uri: `${URL}/${item.poster_path}`}}/>
             </View>
             </TouchableOpacity>
             </View>  
@@ -16,7 +16,7 @@ const TampilFilm = ({data}) => {
     });
 };
 
-export default TampilFilm;
+export default TampilSerial;
 
 const styles = StyleSheet.create({
 	gambar: {

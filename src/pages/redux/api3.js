@@ -1,11 +1,11 @@
-export const GET_FILM = 'GET_FILM';
+export const GET_DISCOVER_TMDB = 'GET_DISCOVER_TMDB';
 
-const API_URL = 'https://api.themoviedb.org/3/trending/movie/week?api_key=70f528175d440c1c9f1d118607cf5bf7';
+const API_URL3 = 'https://api.themoviedb.org/3/discover/movie?api_key=70f528175d440c1c9f1d118607cf5bf7';
 
-const getFilm = () => {
+const getMovie = () => {
     try{
         return async dispatch => {
-            const result = await fetch(API_URL, {
+            const result = await fetch(API_URL3, {
                 method: 'GET',
                 headers: {
                     "Content-Type": "application/json"
@@ -14,7 +14,7 @@ const getFilm = () => {
             const json = await result.json();
             if(json){
                 dispatch({
-                    type: GET_FILM,
+                    type: GET_DISCOVER_TMDB,
                     payload: json
                 })
             }else{
@@ -25,4 +25,4 @@ const getFilm = () => {
         console.log(error)
     }
 };
-export default getFilm;
+export default getMovie;

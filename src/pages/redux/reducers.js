@@ -1,17 +1,23 @@
-
 import { GET_FILM } from "./api";
+import { GET_SERIAL } from "./api2";
+import { GET_DISCOVER_TMDB } from "./api3";
 
-const initialState = {
-    film: [],
-}
+const TitikAwal = {
+    trending_film: [],
+    serial_tv: [],
+    movie: [],
+};
 
-function FilmReducer(state = initialState, action){
+export const FilmReducer=(state = TitikAwal, action) =>{
     switch(action.type){
         case GET_FILM:
-            return {...state, film: action.payload};
+            return {...state, trending_film: action.payload};
+        case GET_SERIAL:
+            return {...state, serial_tv: action.payload};
+        case GET_DISCOVER_TMDB:
+            return {...state, movie: action.payload};
         default:
             return state;
-    }
-}
+    };
+};
 
-export default FilmReducer;
