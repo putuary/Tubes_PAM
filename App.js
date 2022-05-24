@@ -1,8 +1,25 @@
-import React from 'react';
-import Detail from './src/pages/detail';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
 
-const App = () => {
-  return <Detail />;
-};
-
-export default App;
+ import { StyleSheet, Text, View } from 'react-native';
+ import React from 'react';
+ import {NavigationContainer} from '@react-navigation/native';
+ import Route from './rute';
+ 
+ 
+ const Laundry = () => {
+   return (
+     <NavigationContainer>
+     <Route/>
+     </NavigationContainer>
+   );
+ };
+ 
+ export default Laundry;
+ 
+ const styles = StyleSheet.create({});
