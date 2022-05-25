@@ -4,19 +4,7 @@ import { Badge, Surface, Title } from 'react-native-paper'
 
 
 const BagianSerial = () => {
-    const Kanan = () => (
-		    <TouchableOpacity style={{alignItems: 'center', justifyContent: 'center', top: 5, right: 20}}>
-                      <Image source={
-                          require('../../Assets/Icon/cari.png')}
-                          resizeMode="contain"
-                          style={{
-                              width: 30,
-                              height: 30,
-                              
-                          }}
-                          />
-        </TouchableOpacity>
-	      )
+    
 	  const TitleView = () => (
 		    <View style={styles.titleView}>
 			    <Title style={{ color: 'white', left: 30, fontWeight: 'bold' }}>Serial TV</Title>
@@ -25,7 +13,7 @@ const BagianSerial = () => {
 	  return (
 		    <Surface style={[styles.header, { backgroundColor: 'black' }]}>
 			    <TitleView />
-			    <Kanan />
+			   
 		    </Surface>
 	)
 };

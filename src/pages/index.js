@@ -4,8 +4,7 @@ import Film from './film';
 import Serial from './serial';
 import DetailFilm from './detail/film';
 import DetailSerial from './detail/tv';
-import Cari from './search';
-import Searchmovie from './search/film';
+
 
 export {
   Splash,
@@ -14,6 +13,4 @@ export {
   Serial,
   DetailFilm,
   DetailSerial,
-  Cari,
-  Searchmovie,
 };

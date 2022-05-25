@@ -9,30 +9,8 @@ import {
 import React from 'react';
 import {Badge, Surface, Title} from 'react-native-paper';
 
-const BagianFilm = ({navigation}) => {
-  const Kanan = () => (
-    <TouchableOpacity
-      style={{
-        alignItems: 'center',
-        justifyContent: 'center',
-        top: 5,
-        right: 20,
-      }}
-      onPress={() =>
-        navigation.navigate('Cari', {
-          pilih: 'movie',
-        })
-      }>
-      <Image
-        source={require('../../Assets/Icon/cari.png')}
-        resizeMode="contain"
-        style={{
-          width: 30,
-          height: 30,
-        }}
-      />
-    </TouchableOpacity>
-  );
+const BagianFilm = () => {
+  
   const TitleView = () => (
     <View style={styles.titleView}>
       <Title style={{color: 'white', left: 30, fontWeight: 'bold'}}>Film</Title>
@@ -41,7 +19,6 @@ const BagianFilm = ({navigation}) => {
   return (
     <Surface style={[styles.header, {backgroundColor: 'black'}]}>
       <TitleView />
-      <Kanan />
     </Surface>
   );
 };

@@ -9,8 +9,6 @@ import {
   Serial,
   DetailFilm,
   DetailSerial,
-  Cari,
-  Searchmovie,
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
@@ -127,20 +125,6 @@ const Route = () => {
       <Stack.Screen
         name="DetailSerial"
         component={DetailSerial}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Cari"
-        component={Cari}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Searchmovie"
-        component={Searchmovie}
         options={{
           headerShown: false,
         }}
